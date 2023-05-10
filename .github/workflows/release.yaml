@@ -12,6 +12,3 @@ on:
 jobs:
   release:
     uses: nekottyo-orgs/auto-tag-action-example/.github/workflows/release.yaml@main
-
-  release-check:
-    uses: nekottyo-orgs/auto-tag-action-example/.github/workflows/release-check.yaml@main

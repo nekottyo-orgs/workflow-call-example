@@ -1,9 +1,10 @@
-name: release
+name: service release
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: 'Version'
+      tag:
+        description: 'Tag for the release'
+        type: string
         required: false
         default: ""
 
@@ -12,4 +13,4 @@ jobs:
   service-release:
     uses: nekottyo-orgs/auto-tag-action-example/.github/workflows/service-release.yaml@main
     with:
-      version: ${{ github.event.inputs.version }}
+      tag: ${{ github.event.inputs.tag }}
